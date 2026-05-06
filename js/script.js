@@ -12,7 +12,6 @@ while (aventureiro > 0 && orc > 0) {
     }
     orc -= ataqueAventureiro;
     console.log(`O Aventureiro ataca o Orc e causa ${ataqueAventureiro} de dano. Vida do Orc cai para: ${orc}`);
-    let ataqueOrc = Math.floor(Math.random() * 10);
 
     // Ataque do Orc
     if (orc > 0) {
@@ -28,4 +27,4 @@ if (aventureiro > 0) {
     console.log("O Aventureiro venceu a batalha. PARABÉNS!");
 } else {
     console.log("O Orc venceu a batalha. TENTE NOVAMENTE!");
-}
+};
