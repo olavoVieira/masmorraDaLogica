@@ -37,23 +37,23 @@ while (aventureiro > 0 && orc > 0) {
 console.log("\n------------------------------------------")
 if (aventureiro > 0) {
     console.log("O Aventureiro venceu a batalha. PARABÉNS!");
+
+    console.log("\n--- Coletando itens do baú ---");
+    for (let i = 0; i < bau.length; i++) {
+        let item = bau[i];
+        if (item === "Escudo Quebrado") {
+        console.log("Item lixo descartado: " + item);
+        } else {
+            mochila.push(item);
+            console.log("Você coletou: " + item);
+        }
+    }
+
+    console.log("\n--- Itens finais na mochila ---");
+    for (let i = 0; i < mochila.length; i++) {
+        console.log("Mochila: " + mochila[i]);
+    };
+
 } else {
     console.log("O Orc venceu a batalha. TENTE NOVAMENTE!");
 };
-
-
-console.log("\n--- Coletando itens do baú ---");
-for (let i = 0; i < bau.length; i++) {
-    let item = bau[i];
-    if (item === "Escudo Quebrado") {
-        console.log("Item lixo descartado: " + item);
-    } else {
-        mochila.push(item);
-        console.log("Você coletou: " + item);
-    }
-}
-
-console.log("\n--- Itens finais na mochila ---");
-for (let i = 0; i < mochila.length; i++) {
-    console.log("Mochila: " + mochila[i]);
-}
