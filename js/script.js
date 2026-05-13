@@ -1,6 +1,18 @@
+// Inventário inicial
+let mochila = ["Tocha", "Corda"];
 let aventureiro = 50;
 let orc = 50;
 let turno = 1;
+
+// Itens do baú
+let bau = ["Espada de Ouro", "Poção de Cura", "Escudo Quebrado", "Gema Preciosa"];
+
+console.log("---- SE PREPARE PARA A BATALHA! ----");
+console.log("Itens na mochila do Aventureiro: ");
+
+for (let i = 0; i < mochila.length; i++) {
+    console.log(`- ${mochila[i]}`);
+}
 
 while (aventureiro > 0 && orc > 0) {
     console.log(`Turno ${turno}`);
@@ -28,3 +40,20 @@ if (aventureiro > 0) {
 } else {
     console.log("O Orc venceu a batalha. TENTE NOVAMENTE!");
 };
+
+
+console.log("\n--- Coletando itens do baú ---");
+for (let i = 0; i < bau.length; i++) {
+    let item = bau[i];
+    if (item === "Escudo Quebrado") {
+        console.log("Item lixo descartado: " + item);
+    } else {
+        mochila.push(item);
+        console.log("Você coletou: " + item);
+    }
+}
+
+console.log("\n--- Itens finais na mochila ---");
+for (let i = 0; i < mochila.length; i++) {
+    console.log("Mochila: " + mochila[i]);
+}
